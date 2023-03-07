@@ -131,6 +131,10 @@ Public Class Bill_Maker
         )
         RentedItemsAdapter.InsertCommand = New SqlCommandBuilder(RentedItemsAdapter).GetInsertCommand(True)
         RentedItemsAdapter.Fill(RentedItems)
+
+        'We clear rows so that the index of the dataset matches the index of
+        'DataGridView
+
         RentedItems.Tables(0).Rows.Clear()
 
     End Sub
@@ -172,6 +176,7 @@ Public Class Bill_Maker
                 row("i_Cst_con") = Custcontact.Text
                 row("i_bill_id") = billID
                 row("i_returned") = 0
+
                 RentedItems.Tables(0).Rows.Add(row)
 
                 totQty += Itm_qty.Value
