@@ -244,12 +244,6 @@
     <Compile Include="StockManager.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestForm.Designer.vb">
-      <DependentUpon>TestForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="TestForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Bill_History.resx">
